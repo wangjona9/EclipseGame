@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
-        Debug.Log("Speed: " + moveSpeed);
+        //Debug.Log("Speed: " + moveSpeed);
     }
 
     private void PlayerInput()
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         // mode - crouching
         if (Input.GetKey(crouchKey))
         {   
-            Debug.Log("Crouching");
+            //Debug.Log("Crouching");
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         // mode - sprinting
         if (grounded && Input.GetKey(sprintKey) && !isCrouching)
         {
-            Debug.Log("Sprinting");
+            //Debug.Log("Sprinting");
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
         }
@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         // mode - walking
         else if (grounded && !isCrouching)
         {
-            Debug.Log("Walking");
+            //Debug.Log("Walking");
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
