@@ -13,6 +13,9 @@ public class PlayerCamera : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    [SerializeField]
+    Camera fovCamera;
+
     private void Start()
     {
         //locks and hides cursor
@@ -35,5 +38,15 @@ public class PlayerCamera : MonoBehaviour
         //rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+        DynamicFov();
+    }
+
+    private void DynamicFov()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+            fovCamera.fieldOfView = Mathf.Lerp(fovCamera.fieldOfView, 80, 10f * Time.deltaTime);
+        else 
+            fovCamera.fieldOfView = Mathf.Lerp(fovCamera.fieldOfView, 65, 10f * Time.deltaTime);
     }
 }
