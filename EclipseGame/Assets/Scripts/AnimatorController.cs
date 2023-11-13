@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimatorController : MonoBehaviour
 {
     Animator animator;
+    int isIdleHash;
     int isRunningHash;
     int isWalkingHash;
     int isCrouchingHash;
@@ -14,6 +15,7 @@ public class AnimatorController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        isIdleHash = Animator.StringToHash("isIdle");
         isRunningHash = Animator.StringToHash("isRunning");
         isWalkingHash = Animator.StringToHash("isWalking");
         isCrouchingHash = Animator.StringToHash("isCrouching");
@@ -21,6 +23,7 @@ public class AnimatorController : MonoBehaviour
 
     void Update()
     {
+        bool isIdle = animator.GetBool(isIdleHash);
         bool isRunning = animator.GetBool(isRunningHash);
         bool isWalking = animator.GetBool(isWalkingHash);
         bool isCrouching = animator.GetBool(isCrouchingHash);
@@ -34,6 +37,7 @@ public class AnimatorController : MonoBehaviour
             Debug.Log("isRunning");
             animator.SetBool(isRunningHash, true);
             animator.SetBool(isWalkingHash, false);
+            animator.SetBool(isIdleHash, false);
         }
 
         if (crouchPressed)
@@ -42,6 +46,7 @@ public class AnimatorController : MonoBehaviour
             animator.SetBool(isRunningHash, false);
             animator.SetBool(isWalkingHash, false);
             animator.SetBool(isCrouchingHash, true);
+            animator.SetBool(isIdleHash, false);
         }
 
         if (forwardPressed && !runPressed)
@@ -49,6 +54,10 @@ public class AnimatorController : MonoBehaviour
             Debug.Log("isWalking");
             animator.SetBool(isWalkingHash, true);
             animator.SetBool(isRunningHash, false);
+            animator.SetBool(isIdleHash, false);
         }
+
+        else 
+            animator.SetBool(isIdleHash, true);
     }
 }
