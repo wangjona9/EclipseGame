@@ -50,8 +50,5 @@ public class AnimatorController : MonoBehaviour
             animator.SetBool(isWalkingHash, true);
             animator.SetBool(isRunningHash, false);
         }
-
-
-
     }
 }

@@ -13,8 +13,10 @@ public class PlayerCamera : MonoBehaviour
     float xRotation;
     float yRotation;
 
-    [SerializeField]
-    Camera fovCamera;
+    [SerializeField] Camera fovCamera;
+
+    public ParticleSystem sprintLines;
+    public bool enableSprintLines;
 
     private void Start()
     {
@@ -40,6 +42,7 @@ public class PlayerCamera : MonoBehaviour
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
         DynamicFov();
+        SprintLines();
     }
 
     private void DynamicFov()
@@ -48,5 +51,14 @@ public class PlayerCamera : MonoBehaviour
             fovCamera.fieldOfView = Mathf.Lerp(fovCamera.fieldOfView, 80, 10f * Time.deltaTime);
         else 
             fovCamera.fieldOfView = Mathf.Lerp(fovCamera.fieldOfView, 65, 10f * Time.deltaTime);
+    }
+
+    private void SprintLines()
+    {
+        if (enableSprintLines)
+            if (Input.GetKey(KeyCode.LeftShift))
+                sprintLines.Play();
+            else 
+                sprintLines.Stop();
     }
 }
