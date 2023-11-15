@@ -7,7 +7,7 @@ public class PickUpWeapon : MonoBehaviour
     public PickUpWeapon wrenchScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, wrenchContainer, fpsCam;
+    public Transform player, wrenchContainer, fpsCam, gunContainer;
 
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
