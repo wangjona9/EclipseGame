@@ -42,7 +42,7 @@ public class EnemyAI : MonoBehaviour
             ChasePlayer();
         if (playerInAttackRange && playerInSightRange)
             AttackPlayer();
-            // nigga
+            
 
     }
 
