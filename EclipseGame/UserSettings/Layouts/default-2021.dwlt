@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 814
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 8629
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 8630
+  controlID: 45
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 8631
+  controlID: 46
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -402,9 +402,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 0e6a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 8e6cfeff906cfeffc06cfeff6e6dfeff846dfeff866dfeff6a6efeff707bfeffb47bfefff07bfeff2c7cfeff8a7cfeff180fffff6a3affff3aceffff269100003c920000
+      m_ExpandedIDs: 06fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Main Camera
@@ -687,9 +687,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 222.46738, y: -206.27008, z: 453.66672}
+    m_Target: {x: 19.789413, y: 15.352813, z: 24.86359}
     speed: 2
-    m_Value: {x: 222.46738, y: -206.27008, z: 453.66672}
+    m_Value: {x: 19.789413, y: 15.352813, z: 24.86359}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -736,9 +736,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.22588332, y: -0.68818915, z: 0.24058415, w: -0.6461374}
+    m_Target: {x: -0.088884145, y: 0.9082425, z: -0.24873395, w: -0.32455203}
     speed: 2
-    m_Value: {x: -0.18762617, y: -0.6432681, z: 0.16686618, w: -0.7232968}
+    m_Value: {x: -0.089256816, y: 0.9077513, z: -0.24859942, w: -0.32591283}
   m_Size:
     m_Target: 149.7655
     speed: 2
@@ -874,22 +874,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Unvik_3D/AshMoor/Prefabs
+    - Assets/asoliddev - Modular Fantasy Character
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Unvik_3D/AshMoor/Prefabs
+  - Assets/asoliddev - Modular Fantasy Character
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/jonathanwang/Documents/GitHub/EclipseGame/EclipseGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 178.99994}
-    m_SelectedIDs: a6990000
-    m_LastClickedID: 39334
-    m_ExpandedIDs: 000000008e960000ca960000cc960000969900009899000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 49}
+    m_SelectedIDs: 0e6a0000
+    m_LastClickedID: 27150
+    m_ExpandedIDs: 00000000206100006061000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -917,7 +917,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e960000ca960000cc96000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000020610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
