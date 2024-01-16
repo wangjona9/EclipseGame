@@ -42,7 +42,10 @@ public class EnemyAI : MonoBehaviour
             ChasePlayer();
         if (playerInAttackRange && playerInSightRange)
             AttackPlayer();
+<<<<<<< Updated upstream
             
+=======
+>>>>>>> Stashed changes
 
     }
 
