@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCooldown;
+    public float fallMultiplier;
     public float airMultiplier;
     bool readyToJump;
 
@@ -165,12 +166,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // on ground
-        if(grounded)
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         // in air
-        else if(!grounded)
+        else if (!grounded)
+        { 
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
-
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
         // turn off gravity while on slope
         rb.useGravity = !OnSlope();
     }
